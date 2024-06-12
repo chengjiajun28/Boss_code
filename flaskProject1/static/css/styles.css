@@ -1,0 +1,20 @@
+body {
+    padding-top: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.modal-body p {
+    margin-bottom: 0.5rem;
+}
+
+.modal-body .btn {
+    margin-top: 1rem;
+}

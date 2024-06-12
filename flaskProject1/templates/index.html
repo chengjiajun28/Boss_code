@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    {% for job in job_listings %}
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">{{ job.title }}</h5>
+                <p class="card-text">{{ job.company }}</p>
+                <p class="card-text">{{ job.city }}</p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#jobDetailModal"
+                        data-title="{{ job.title }}"
+                        data-details="{{ job.details }}"
+                        data-company="{{ job.company }}"
+                        data-city="{{ job.city }}"
+                        data-url="{{ job.url }}"
+                        data-name="{{ job.name }}">
+                    查看详情
+                </button>
+                <a href="{{ job.url }}" class="btn btn-secondary" target="_blank">访问链接</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
